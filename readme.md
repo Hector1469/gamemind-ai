@@ -165,10 +165,16 @@ Frontend 
 
 6. Abrir en el navegador 
 
-*   http://localhost:7860 
+*   http://localhost:7860<br><br>  
 
 
+**Reflexión final**<br>
+El proyecto ha probado ser un gran reto y cuanta con varias limitaciones. La principal dificultad ha sido la naturaleza del LLM al decidir qué herramienta utilizar, lo que en ocasiones genera selecciones con inconsistencias en el flujo del agente.  
+También he encontrado problemas en la integración con APIs externas como Steam y SteamSpy, especialmente cuando los datos devueltos no son totalmente precisos o están mal interpretados por el modelo, por ejemplo, al preguntarle por el juego The Witcher 3 no era capaz de diferenciar entre el juego y una herramienta del juego. Steam Spy en concreto ha sido un dolor de cabeza, la api empezó funcionando sin mucho problema, pero de vez en cuando deja de hacerlo, es muy poco fiable en ese sentido. Debido a esto tuve que hacer que hacer que si la api usada para las recomendaciones falla, la recomendación del juego recayera en el game profile RAG tool y se avise al usuario de que la api está caída. 
 
+ 
+
+Como mejoras futuras, me gustaría reforzar el filtrado y limpieza de datos provenientes de APIs externas, y mejorar el sistema RAG para que actúe como un verdadero respaldo semántico más fiable. También me gustaría escalar la arquitectura hacia un sistema  con mejor separación entre lógica, herramientas e interfaz. Además si es posible me gustaría encontrar e implementar una api más estable, lo que me permitiría añadir más funcionalidades, además de que estas serían más fiables.  Funcionalidades como enviar las recomendaciones de juegos junto a los links de sus páginas principales de Steam, añadir límite de precio, región, y búsqueda de contenido adicional para juegos concretos. 
  
 
  
